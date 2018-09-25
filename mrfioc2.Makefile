@@ -23,7 +23,7 @@
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include ${E3_REQUIRE_TOOLS}/driver.makefile
-include $(where_am_I)/../configure/DECOUPLE_FLAGS
+include $(E3_REQUIRE_TOOLS)/excludeflags.mk
 
 ifneq ($(strip $(DEVLIB2_DEP_VERSION)),)
 devlib2_VERSION=$(DEVLIB2_DEP_VERSION)

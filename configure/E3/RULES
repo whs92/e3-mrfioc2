@@ -1,0 +1,6 @@
+
+include $(TOP)/configure/E3/RULES_E3
+include $(TOP)/configure/E3/RULES_DKMS
+include $(TOP)/configure/E3/RULES_DB
+include $(TOP)/configure/E3/RULES_EPICS
+
