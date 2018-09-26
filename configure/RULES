@@ -1,5 +1,10 @@
-#CONFIG
 
 include $(REQUIRE_CONFIG)/RULES
 
-include $(TOP)/configure/E3/RULES
+
+
+include $(TOP)/configure/module/RULES_E3
+include $(TOP)/configure/module/RULES_DKMS
+include $(TOP)/configure/module/RULES_DB
+include $(TOP)/configure/module/RULES_EPICS
+

@@ -7,18 +7,15 @@ else
 include $(TOP)/configure/RELEASE
 endif
 
-# CONFIG=$(EPICS_BASE)/configure
-# include $(CONFIG)/CONFIG
-
 ifneq (,$(findstring dev,$(MAKECMDGOALS)))
 include $(TOP)/configure/CONFIG_MODULE_DEV
 else
 include $(TOP)/configure/CONFIG_MODULE
 endif
 
-include $(TOP)/configure/E3/CONFIG_REQUIRE
 
-REQUIRE_CONFIG=$(E3_REQUIRE_LOCATION)/configure
+E3_REQUIRE_LOCATION:=$(EPICS_BASE)/$(E3_REQUIRE_NAME)/$(E3_REQUIRE_VERSION)
+REQUIRE_CONFIG:=$(E3_REQUIRE_LOCATION)/configure
 
 include $(REQUIRE_CONFIG)/CONFIG
 
